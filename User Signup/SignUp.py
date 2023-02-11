@@ -16,17 +16,16 @@ window.resizable(False, False)
 signup_img = Image.open("SignUp.png")
 
 #Resize Image
-resized=signup_img.resize((316, 616), Image.ANTIALIAS)
+resized=signup_img.resize((348, 436), Image.ANTIALIAS)
 
 new_signup_img = ImageTk.PhotoImage(resized)
 # signup_img.place(x=100, y=100)
 
 
-
 signup_label=Label(window, image=new_signup_img, border=0, bg="white")
-signup_label.place(x=50,y=90)
+signup_label.place(x=50,y=30)
 
-frame=Frame(window,width=302,height=400,bg="red")
+frame=Frame(window,width=302,height=400,bg="white")
 frame.place(x=560,y=70)
 
 
@@ -126,18 +125,14 @@ enter_email.bind("<FocusOut>", on_exit)
 
 Frame(frame, width=203, height=2, bg="black").place(x=50, y=221)
 
-signup_button=Button(frame, width=39,pady=7,text="Sign Up", bg="#57a1f8", fg="white",border=0).place(x=35,y=280)
+signup_button=Button(frame, width=34,pady=7,text="Sign Up", bg="#57a1f8", fg="white",border=0).place(x=30,y=241)
 # signup_button.place()
-signup_label=Label(frame, text="Already have an account", fg="black", bg="white", font=("Century Gothic", 9))
-signup_label.place(x=90,y=340)
+signin_label=Label(frame, text="Already have an account?", fg="#57a1f8", bg="white", font=("Century Gothic", 9))
+signin_label.place(x=73,y=280)
 
-# signin_button=Button(frame,width=6,pady=7,text="Sign In", bg="white", fg="#57a1f8", cursor="hand2", font=("Century Gothic", 14))
-# signin_button.place(x=30,y=300)
+signin_button=Button(frame,width=8, pady=7,border=0, text="Sign In", bg="#57a1f8", fg="white", cursor="hand2", font=("Century Gothic", 9))
+signin_button.place(x=120,y=300)
 
-
-
-# signup_label=Label(frame,text="Don't have an account?", fg="black",bg="white",font=("Century Gothic", 8))
-# signup_label.place(x=70,y=300)
 
 
 window.mainloop()
